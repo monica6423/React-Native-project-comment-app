@@ -23,7 +23,7 @@ export default function RepositoryItem({avatar, title, detail, lan, star, forks,
           }}
       />
       <Text color="textPrimary" fontWeight="bold">Full name: {title}</Text>
-      <Text color="textSecondary">dddDescription: {detail}</Text>
+      <Text color="textSecondary">Description: {detail}</Text>
       <Text style={styles.lanBox}>{lan}</Text>
       <Text color="textPrimary" fontWeight="bold">{star}</Text>
       <Text color="textPrimary" fontWeight="bold">{forks}</Text>
