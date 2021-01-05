@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, View, StyleSheet, Text } from 'react-native';
-
+import RepositoryItem from './RepositoryItem';
 const styles = StyleSheet.create({
   separator: {
     height: 10,
@@ -53,24 +53,13 @@ const repositories = [
     ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4',
   },
 ];
-const Item = ({ title, detail, lan, star, forks, review, rating }) => (
-    <View>
-      <Text >Full name: {title}</Text>
-      <Text >Description: {detail}</Text>
-      <Text >Language: {lan}</Text>
-      <Text >Stars: {star}</Text>
-      <Text >Forks: {forks}</Text>
-      <Text >Reviews: {review}</Text>
-      <Text >Rating: {rating}</Text>
 
-    </View>
-);
 const ItemSeparator = () => <View style={styles.separator} />;
 
 const RepositoryList = () => {
 
     const renderItem = ({ item }) => (
-        <Item 
+        <RepositoryItem 
         title={item.fullName} 
         detail={item.description}
         lan={item.language}
@@ -78,6 +67,7 @@ const RepositoryList = () => {
         forks={item.forksCount}
         review={item.reviewCount}
         rating={item.ratingAverage}
+        avatar={item.ownerAvatarUrl}
         />
     );
     
