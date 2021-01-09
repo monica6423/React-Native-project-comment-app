@@ -2,65 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1aeecd0-65a0-4fd3-a268-9efa42848fe1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/.env.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/.github/workflows/ci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/knexfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/migrations/20200216132342_create_users_table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/migrations/20200216133031_create_repositories_table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/migrations/20200216133906_create_reviews_table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/seeds/1_create_users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/seeds/2_create_repositories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/seeds/3_create_reviews.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/api/repositories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/context.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/errors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/__tests__/schema.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/enums/OrderDirection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/mutations/authorize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/mutations/createReview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/mutations/createUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/mutations/deleteReview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/queries/authorizedUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/queries/repositories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/queries/repository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/queries/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/scalars/DateTime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/schema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/PageInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/Repository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/RepositoryConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/Review.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/ReviewConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/graphql/types/UserConnection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/models/BaseModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/models/Repository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/models/Review.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/models/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/utils/authService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/utils/createPaginationQuery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/utils/dataLoaders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/utils/githubClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rate-repository-api/src/utils/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rate-repository-api/.env.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RepositoryList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RepositoryList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
