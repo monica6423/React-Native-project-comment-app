@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1aeecd0-65a0-4fd3-a268-9efa42848fe1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rate-repository-api/.env.template" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RepositoryList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RepositoryList.jsx" afterDir="false" />
     </list>
