@@ -39,7 +39,7 @@ const SignInForm = ({ onSubmit }) => {
 
 const setToken = async(accessToken) => {
   await token.setAccessToken(accessToken);
-  apolloClient.resetStore();
+  //apolloClient.resetStore();
   console.log('set token after reset', accessToken)
 }
 
@@ -55,9 +55,9 @@ const SignIn = () => {
     const { username, password } = values;
 
     try {
-      const {data} = await signIn({ username, password})
+      const data = await signIn({ username, password})
       console.log('data sign in:',data);
-      setToken(data.authorize.accessToken);
+      //setToken(data.authorize.accessToken);
       history.push("/");
     }catch(e){
       console.log(e);

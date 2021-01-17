@@ -5,13 +5,20 @@ import AuthStorageContext from '../contexts/AuthStorageContext';
 import { useApolloClient } from '@apollo/client';
 const useSignIn = () => {
     const authStorage = useContext(AuthStorageContext);
-    console.log('auth stoirage', authStorage, AuthStorageContext)
+    const apolloClient = useApolloClient();
     const [mutate, result] = useMutation(LOG_IN);
   
     const signIn = async ({ username, password }) => {
         // call the mutate function here with the right arguments
-        return mutate({variables: { username, password}})
+        const {data} = await mutate({variables: { username, password}})
+        await authStorage.setAccessToken(data.authorize.accessToken);
+
+        apolloClient.resetStore();
+    
+        return data;
     };
+
+    
   
     return [signIn, result];
   };
