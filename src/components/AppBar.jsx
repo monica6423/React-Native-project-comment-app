@@ -31,7 +31,6 @@ const AppBar = () => {
   const logOut = async() => {
     await authStorage.removeAccessToken();
 
-
     console.log('data.authorizedUser  logout',data.authorizedUser)
     apolloClient.resetStore();
   
