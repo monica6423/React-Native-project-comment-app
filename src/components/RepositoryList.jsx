@@ -3,6 +3,7 @@ import { FlatList, View, StyleSheet, Text } from 'react-native';
 import RepositoryItem from './RepositoryItem';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_REPOSITORIES } from '../graphql/queries';
+import useRepositories from '../hooks/useRepositories'
 
 const styles = StyleSheet.create({
   separator: {
@@ -13,25 +14,11 @@ const styles = StyleSheet.create({
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-const RepositoryList = () => {
-    const { data, error, loading } = useQuery(GET_REPOSITORIES, {fetchPolicy: 'cache-and-network',});
-    // const [repositories, setRepositories] = useState();
+const RepositoryListContainer = ({repositories}) => {
 
-    // const fetchRepositories = async () => {
-    //   const response = await fetch('http://192.168.1.105:5000/api/repositories');
-    //   const json = await response.json();
-    //   setRepositories(json);
-    // };
-  
-    // useEffect(() => {
-    //   fetchRepositories();
-    // }, []);
-  
-    // Get the nodes from the edges array
-    const repositoryNodes = data
-      ? data.repositories.edges.map(edge => edge.node)
+    const repositoryNodes = repositories
+      ? repositories.repositories.edges.map(edge => edge.node)
       : [];
-
 
     const renderItem = ({ item }) => (
         <RepositoryItem 
@@ -43,6 +30,7 @@ const RepositoryList = () => {
         review={item.reviewCount}
         rating={item.ratingAverage}
         avatar={item.ownerAvatarUrl}
+        id={item.id}
         />
     );
     
@@ -54,6 +42,11 @@ const RepositoryList = () => {
         // other props
         />
     );
+};
+
+const RepositoryList = () => {
+  const repositories =  useRepositories()
+  return <RepositoryListContainer repositories={repositories} />;
 };
 
 export default RepositoryList;
