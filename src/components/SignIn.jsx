@@ -35,17 +35,8 @@ const SignInForm = ({ onSubmit }) => {
         </TouchableWithoutFeedback>
       </View>
     );
-  };
+};
 
-const setToken = async(accessToken) => {
-  await token.setAccessToken(accessToken);
-  //apolloClient.resetStore();
-  console.log('set token after reset', accessToken)
-}
-
-const signOut = async() => {
-  await token.removeAccessToken()
-}
 
 const SignIn = () => {
   let history = useHistory();
@@ -72,7 +63,7 @@ const SignIn = () => {
       onSubmit={onSubmit}>
       {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
     </Formik>
-  );;
+  );
 };
 
 export default SignIn;

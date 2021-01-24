@@ -38,9 +38,20 @@ const AppBar = () => {
 
   return <View style={styles.container}>
     <ScrollView horizontal>
-      <Link to="/"><Text color="headline" fontWeight="bold">Repositories</Text></Link>
-      {data?.authorizedUser?<Link onPress={logOut} to="/sign-in"><Text color="headline" fontWeight="bold">Sign Out</Text></Link>:
-      <Link to="/sign-in"><Text color="headline" fontWeight="bold">Sign In</Text></Link>}
+      <Link to="/"><Text color="headline" fontWeight="bold">Repositories </Text></Link>
+      {data?.authorizedUser&&
+      <Link to="/add-review">
+        <Text color="headline" fontWeight="bold">Create a Review </Text>
+      </Link>}
+
+      {data?.authorizedUser?(
+      <Link onPress={logOut} to="/sign-in">
+        <Text color="headline" fontWeight="bold">Sign Out </Text>
+      </Link>):
+      (<Link to="/sign-in">
+        <Text color="headline" fontWeight="bold">Sign In </Text>
+      </Link>)}
+
     </ScrollView>
     </View>;
 };
