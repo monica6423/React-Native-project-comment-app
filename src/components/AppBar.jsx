@@ -47,10 +47,14 @@ const AppBar = () => {
       {data?.authorizedUser?(
       <Link onPress={logOut} to="/sign-in">
         <Text color="headline" fontWeight="bold">Sign Out </Text>
-      </Link>):
-      (<Link to="/sign-in">
+      </Link>):(<>
+      <Link to="/sign-in">
         <Text color="headline" fontWeight="bold">Sign In </Text>
-      </Link>)}
+      </Link>
+      <Link to="/sign-up">
+        <Text color="headline" fontWeight="bold">Sign Up </Text>
+      </Link>
+        </>)}
 
     </ScrollView>
     </View>;

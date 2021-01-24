@@ -54,9 +54,7 @@ const reviewForm = () => {
         console.log('owvwer name', values)
         try {
             const data = await createReview({ ownerName, rating:Number(rating), repositoryName, text})
-            console.log('data is', data)
             let id = data.createReview.repository.id;
-            console.log('id',id)
             history.push(`/${id}`);
             return console.log('data', data)
         } catch (error) {
