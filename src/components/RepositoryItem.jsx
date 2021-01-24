@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Text from './Text';
+import { useHistory } from "react-router-dom";
+import * as Linking from 'expo-linking';
 
 const styles = StyleSheet.create({
     avatar: {
@@ -13,14 +15,19 @@ const styles = StyleSheet.create({
     }
     
 });
-export default function RepositoryItem({id, avatar, title, detail, lan, star, forks, review, rating }) {
-    const onPress = () => {
+export default function RepositoryItem({id, avatar, title, detail, lan, star, forks, review, rating, url, viewURL }) {
+  const history = useHistory();  
+  const openURL = () => {
+    Linking.openURL(url);
+  }
+  const onPress = (id) => {
       console.log('press!!', id)
+      history.push(`/${id}`);
     }
     return (
     <View>
       <TouchableOpacity
-        onPress={onPress}
+        onPress={ () => onPress(id)}
       >
         <Image
           style={styles.avatar}
@@ -35,6 +42,10 @@ export default function RepositoryItem({id, avatar, title, detail, lan, star, fo
         <Text color="textPrimary" fontWeight="bold">{forks}</Text>
         <Text color="textPrimary" fontWeight="bold">{review}</Text>
         <Text color="textPrimary" fontWeight="bold">{rating}</Text>
+        {viewURL&&(
+          <View style={styles.btnContainer}>
+            <Text onPress={()=>openURL()}>Open in GitHub</Text>
+          </View>)}
       </TouchableOpacity>
     </View>
     )
